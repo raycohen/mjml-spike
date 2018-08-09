@@ -1,0 +1,30 @@
+<mjml>
+<mj-body>
+<mj-section>
+  <mj-column>
+    <mj-image
+      width="128px"
+      src="https://cloud.githubusercontent.com/assets/1830348/15354833/bfe7faaa-1cef-11e6-8d38-15e8951b6636.png"
+    />
+  </mj-column>
+  <mj-column>
+    <mj-include path="./header.mjml" />
+    <mj-text line-height="32px" color="#CCCCCC">{{ event.title }}</mj-text>
+    <mj-text line-height="22px" color="#CCCCCC">Description</mj-text>
+    <mj-text line-height="22px" color="#CCCCCC">Hosted By</mj-text>
+    <mj-text line-height="22px" color="#CCCCCC">Add to calendar</mj-text>
+  </mj-column>
+</mj-section>
+<mj-section>
+  <mj-column>
+    <mj-text line-height="22px" color="#CCCCCC">Block 3</mj-text>
+  </mj-column>
+  <mj-column>
+    <mj-image
+      width="128px"
+      src="https://cloud.githubusercontent.com/assets/1830348/15354833/bfe7faaa-1cef-11e6-8d38-15e8951b6636.png"
+    />
+  </mj-column>
+</mj-section>
+</mj-body>
+</mjml>
