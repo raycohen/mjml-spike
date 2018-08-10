@@ -8,9 +8,8 @@ const template = fs.readFileSync('./index.mjml', 'utf8');
 const interpolated = nunjucks.renderString(template, { event: { title: 'My Flyer Event'} });
 
 // MJML second - mjml is going to validate that you're composing the various
-// mj-elements property, do some validation on values of properties passed to
+// mj-elements properly, do some validation on values of properties passed to
 // those elements, etc
 const mjmlResult = mjml(interpolated);
 
-// console.log(interpolated);
 console.log(mjmlResult.html);
