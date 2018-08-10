@@ -4,22 +4,13 @@ const nunjucks = require('nunjucks');
 
 const template = fs.readFileSync('./index.mjml', 'utf8');
 
-
-// Nunjucks first
+// Nunjucks first - Nunjucks is happy to take any string and output any string
 const interpolated = nunjucks.renderString(template, { event: { title: 'My Flyer Event'} });
+
+// MJML second - mjml is going to validate that you're composing the various
+// mj-elements property, do some validation on values of properties passed to
+// those elements, etc
 const mjmlResult = mjml(interpolated);
+
 // console.log(interpolated);
-// console.log(mjmlResult.html);
-
-// MJML first
-const mjmlResult2 = mjml(template);
-const interpolated2 = nunjucks.renderString(mjmlResult2.html, { event: { title: 'My Flyer Event'} });
-// console.log(mjmlResult2.html);
-// console.log(interpolated2);
-
-
-console.log(mjmlResult.html.length);
-console.log(interpolated2.length);
-
-// Either order has the same output
-console.log(interpolated2 === mjmlResult.html);
+console.log(mjmlResult.html);
